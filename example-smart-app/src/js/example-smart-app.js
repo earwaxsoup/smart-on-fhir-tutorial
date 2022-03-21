@@ -139,7 +139,7 @@
   }
 
   function getRaceValues(pat) {
-    var = race_str = '';
+    var race_str = '';
     if (typeof ob !='undefined'){
       for( var i=0, i<pat.extension[0].extension; i++ ){
         race_str = race_str 
