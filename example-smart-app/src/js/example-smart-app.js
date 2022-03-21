@@ -35,12 +35,12 @@
           
           var debug_str  = patient.gender;
           var debug_val = patient.deceasedBoolean;
+          var phone = '';
 
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family.join(' ');
-
           }
 
           var height = byCodes('8302-2');
@@ -50,8 +50,9 @@
           var ldl = byCodes('2089-1');
 
           //New Value testing
-          var race = byCodes('2106-3');
-          var testing_val = patient.deceasedBoolean;
+          var race = patient.extension[0].valueCoding.display.join('');
+          var testing_val = patient.deceasedBoolean.toString();
+          phone = patient.telecom[0].value.join(' ')
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -60,9 +61,9 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.race = race;
-          p.testing_val = testing_val;
           p.debug_str = debug_str;
-          p.debug_val = debug_val
+          p.debug_val = debug_val;
+          p.phone = phone;
 
 
 
@@ -103,7 +104,8 @@
       race: {value: 'hardcoded value'},
       testing_val: {value: ''},
       debug_str: {value:''},
-      debug_val: {value:''}
+      debug_val: {value:''},
+      phone: {value:''}
     };
   }
 
@@ -135,6 +137,14 @@
     }
   }
 
+  function getPersonValue(ob) {
+    if (typeof ob !='undefined'){
+      return ob.extension[0].valueCoding.display;
+    } else {
+      return undefined;
+    }
+  }
+
   window.drawVisualization = function(p) {
     $('#holder').show();
     $('#loading').hide();
@@ -151,6 +161,7 @@
     $('#testing_val').html(p.testing_val);
     $('#debug_str').html(p.debug_str);
     $('#debug_val').html(p.debug_val);
+    $('#phone').html(p.phone);
   };
 
 })(window);
