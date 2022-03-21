@@ -142,9 +142,10 @@
     var race_str = '';
     if (typeof pat !='undefined'){
       
-      var race_len= pat.extension[0].extension.length
+      var race_len= pat.extension[0].length;
+
       for( var i=0; i < race_len; i++ ){
-        race_str +=  pat.extension[0].extension[i].valueCoding.display + " ";
+        race_str +=  pat.extension[i].extension[0].valueCoding.display + " ";
       }
       return race_str;
       
