@@ -52,7 +52,7 @@
           //New Value testing
           //var race = patient.extension[0].extension[0].valueCoding.display;
           var race = getRaceValues(patient);
-          var testing_val = patient.deceasedBoolean.toString();
+          var testing_val = patient.deceasedBoolean;
           phone = "TEST STRING VALUE";//patient.telecom[0].value.join(' ')
 
           var p = defaultPatient();
@@ -63,7 +63,7 @@
           p.height = getQuantityValueAndUnit(height[0]);
           p.race = race;
           p.debug_str = debug_str;
-          p.debug_val = debug_val;
+          p.debug_val = debug_val.toString();
           p.phone = phone;
 
 
