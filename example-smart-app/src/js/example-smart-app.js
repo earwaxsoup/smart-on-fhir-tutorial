@@ -34,7 +34,9 @@
           //NEW VARIABLES
           
           var testing_val = '';
-          var debug_str = "debug_string"
+          //var debug_str = "debug_string";
+          var debug_str = patient.gender;
+
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
