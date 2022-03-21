@@ -59,7 +59,7 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.race = race;
-          p.testing_val = testing_val;
+          p.testing_val = gender;
           p.debug_str = debug_str;
 
 
