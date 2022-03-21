@@ -140,8 +140,10 @@
 
   function getRaceValues(pat) {
     var race_str = '';
-    if (typeof ob !='undefined'){
-      for( var i=0, i<pat.extension[0].extension; i++ ){
+    if (typeof pat !='undefined'){
+      
+      var race_len= pat.extension[0].extension.length
+      for( var i=0; i < race_len; i++ ){
         race_str = race_str 
           + pat.extension[0].extension[i].valueCoding.display
           + " "
