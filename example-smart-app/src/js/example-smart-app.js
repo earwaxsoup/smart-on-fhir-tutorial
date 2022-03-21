@@ -33,7 +33,7 @@
 
           //NEW VARIABLES
           
-          var testing_val = '';
+          //var testing_val = '';
           //var debug_str = "debug_string";
           var debug_str = patient.gender;
 
@@ -52,7 +52,7 @@
 
           //New Value testing
           var race = byCodes('2106-3');
-          testing_val = patient.deceasedBoolean;
+          var testing_val = patient.deceasedBoolean;
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -102,7 +102,7 @@
       hdl: {value: ''},
       race: {value: 'hardcoded value'},
       testing_val: {value: ''},
-      debug_str: {value:'hardcoded debug'}
+      debug_str: {value:''}
     };
   }
 
@@ -147,6 +147,8 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#race').html(p.race);
+    $('#testing_val').html(p.testing_val);
+    $('#debug_str').html(p.debug_str);
   };
 
 })(window);
