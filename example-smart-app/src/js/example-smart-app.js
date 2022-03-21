@@ -50,7 +50,7 @@
           var ldl = byCodes('2089-1');
 
           //New Value testing
-          var race = patient.extension[0].valueCoding.display;
+          var race = patient.extension[0].extension[0].valueCoding.display;
           var testing_val = patient.deceasedBoolean.toString();
           phone = "TEST STRING VALUE"//patient.telecom[0].value.join(' ')
 
