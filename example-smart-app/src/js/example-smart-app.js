@@ -51,7 +51,7 @@
 
           //New Value testing
           //var race = patient.extension[0].extension[0].valueCoding.display;
-          race = getRaceValues(patient);
+          var race = getRaceValues(patient);
           var testing_val = patient.deceasedBoolean.toString();
           phone = "TEST STRING VALUE";//patient.telecom[0].value.join(' ')
 
