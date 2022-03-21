@@ -49,7 +49,7 @@
 
           //New Value testing
           race = byCodes('2106-3');
-          testing_val = patient.deceasedBoolean.join('');
+          testing_val = patient.deceasedBoolean;
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
