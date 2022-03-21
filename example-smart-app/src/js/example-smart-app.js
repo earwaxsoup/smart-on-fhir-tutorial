@@ -32,13 +32,13 @@
           var lname = '';
 
           //NEW VARIABLES
-          var race = 'test value';
+          var race = 'test race value';
+          var testing_val = '';
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family.join(' ');
 
-            race = byCodes('2106-3');
           }
 
           var height = byCodes('8302-2');
@@ -47,14 +47,18 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
+          //New Value testing
+          race = byCodes('2106-3');
+          testing_val = patient.deceasedBoolean.join('');
+
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-
           p.race = race
+
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -90,6 +94,8 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      race: {value: ''},
+      testing_val: {value: ''}
     };
   }
 
