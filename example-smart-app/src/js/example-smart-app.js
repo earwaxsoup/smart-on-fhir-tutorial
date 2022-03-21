@@ -98,9 +98,9 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      race: {value: ''},
+      race: {value: 'hardcoded value'},
       testing_val: {value: ''},
-      debug_str: {value:''}
+      debug_str: {value:'hardcoded debug'}
     };
   }
 
