@@ -33,9 +33,8 @@
 
           //NEW VARIABLES
           
-          //var testing_val = '';
-          //var debug_str = "debug_string";
-          var debug_str = patient.gender;
+          var debug_str  = patient.gender;
+          var debug_val = patient.deceasedBoolean;
 
 
           if (typeof patient.name[0] !== 'undefined') {
@@ -61,8 +60,9 @@
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.race = race;
-          p.testing_val = gender;
+          p.testing_val = testing_val;
           p.debug_str = debug_str;
+          p.debug_val = debug_val
 
 
 
@@ -102,7 +102,8 @@
       hdl: {value: ''},
       race: {value: 'hardcoded value'},
       testing_val: {value: ''},
-      debug_str: {value:''}
+      debug_str: {value:''},
+      debug_val: {value:''}
     };
   }
 
@@ -149,6 +150,7 @@
     $('#race').html(p.race);
     $('#testing_val').html(p.testing_val);
     $('#debug_str').html(p.debug_str);
+    $('#debug_val').html(p.debug_val);
   };
 
 })(window);
