@@ -53,7 +53,8 @@
           //var race = patient.extension[0].extension[0].valueCoding.display;
           var race = getRaceValues(patient);
           var testing_val = patient.deceasedBoolean;
-          phone = "TEST STRING VALUE";//patient.telecom[0].value.join(' ')
+          //phone = "TEST STRING VALUE";
+          phone = patient.extension[0].extension[0].valueCoding.display;
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -140,9 +141,11 @@
 
   function getRaceValues(pat) {
     var race_str = '';
+    console.log('getRaceValues function start');
+    var race_len = pat.extension.length;
     if (typeof pat !='undefined'){
       
-      var race_len= pat.extension[0].length;
+      var race_len= pat.extension.length;
       console.log('race_len: ' + race_len);
       for( var i=0; i < race_len; i++ ){
         
