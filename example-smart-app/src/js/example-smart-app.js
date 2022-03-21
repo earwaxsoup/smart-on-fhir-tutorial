@@ -34,6 +34,7 @@
           //NEW VARIABLES
           var race = 'test race value';
           var testing_val = '';
+          var debug_str = "debug_string"
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
@@ -57,7 +58,10 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          p.race = race
+          p.race = race;
+          p.testing_val = testing_val;
+          p.debug_str = debug_str;
+
 
 
           if (typeof systolicbp != 'undefined')  {
@@ -95,7 +99,8 @@
       ldl: {value: ''},
       hdl: {value: ''},
       race: {value: ''},
-      testing_val: {value: ''}
+      testing_val: {value: ''},
+      debug_str: {value:''}
     };
   }
 
