@@ -32,7 +32,7 @@
           var lname = '';
 
           //NEW VARIABLES
-          var race = 'test race value';
+          
           var testing_val = '';
           var debug_str = "debug_string"
 
@@ -49,15 +49,14 @@
           var ldl = byCodes('2089-1');
 
           //New Value testing
-          race = byCodes('2106-3');
+          var race = byCodes('2106-3');
           testing_val = patient.deceasedBoolean;
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
-          //p.lname = lname;
-          p.lname = race;
+          p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
           p.race = race;
           p.testing_val = testing_val;
