@@ -144,7 +144,7 @@
       
       var race_len= pat.extension[0].extension.length
       for( var i=0; i < race_len; i++ ){
-        race_str +=  pat.extension[0].extension[i].valueCoding.display + " "
+        race_str +=  pat.extension[0].extension[i].valueCoding.display + " ";
       }
       return race_str;
       
