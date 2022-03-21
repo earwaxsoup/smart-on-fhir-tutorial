@@ -50,9 +50,10 @@
           var ldl = byCodes('2089-1');
 
           //New Value testing
-          var race = patient.extension[0].extension[0].valueCoding.display;
+          //var race = patient.extension[0].extension[0].valueCoding.display;
+          race = getRaceValues(patient);
           var testing_val = patient.deceasedBoolean.toString();
-          phone = "TEST STRING VALUE"//patient.telecom[0].value.join(' ')
+          phone = "TEST STRING VALUE";//patient.telecom[0].value.join(' ')
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -137,9 +138,16 @@
     }
   }
 
-  function getPersonValue(ob) {
+  function getRaceValues(pat) {
+    var = race_str = '';
     if (typeof ob !='undefined'){
-      return ob.extension[0].valueCoding.display;
+      for( var i=0, i<pat.extension[0].extension; i++ ){
+        race_str = race_str 
+          + pat.extension[0].extension[i].valueCoding.display
+          + " "
+      }
+      return race_str;
+      
     } else {
       return undefined;
     }
