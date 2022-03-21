@@ -143,9 +143,12 @@
     if (typeof pat !='undefined'){
       
       var race_len= pat.extension[0].length;
-
+      console.log('race_len: ' + race_len);
       for( var i=0; i < race_len; i++ ){
+        
+        console.log('for loop:' + i);
         race_str +=  pat.extension[i].extension[0].valueCoding.display + " ";
+        console.log(race_str);
       }
       return race_str;
       
