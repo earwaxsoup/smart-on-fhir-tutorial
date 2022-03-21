@@ -56,7 +56,8 @@
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
-          p.lname = lname;
+          //p.lname = lname;
+          p.lname = race;
           p.height = getQuantityValueAndUnit(height[0]);
           p.race = race;
           p.testing_val = testing_val;
