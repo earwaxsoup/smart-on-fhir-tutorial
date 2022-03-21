@@ -50,9 +50,9 @@
           var ldl = byCodes('2089-1');
 
           //New Value testing
-          var race = patient.extension[0].valueCoding.display.join('');
+          var race = patient.extension[0].valueCoding.display;
           var testing_val = patient.deceasedBoolean.toString();
-          phone = patient.telecom[0].value.join(' ')
+          phone = "TEST STRING VALUE"//patient.telecom[0].value.join(' ')
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -101,7 +101,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      race: {value: 'hardcoded value'},
+      race: {value: ''},
       testing_val: {value: ''},
       debug_str: {value:''},
       debug_val: {value:''},
